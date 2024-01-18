@@ -1,4 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div>chat</div>
+<div class="chat-wrapper">
+    <div class="chat-header">
+        <h2>Chat App</h2>
+      </div>
+    <div class="chat-messages">
+        <div class="message received">Hello!</div>
+        <div class="message sent">Hi there!</div>
+    </div>
+    <form class="chat-input-container">
+        <input type="text" class="message-input" placeholder="Type your message...">
+        <button class="send-button">Send</button>
+    </form>
+</div>
 {% endblock %}
