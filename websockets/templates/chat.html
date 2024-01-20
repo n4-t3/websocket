@@ -11,6 +11,7 @@
     <form class="chat-input-container">
         <input type="text" class="message-input" placeholder="Type your message...">
         <button class="send-button">Send</button>
+        {% csrf_token %}
     </form>
 </div>
 {% endblock %}

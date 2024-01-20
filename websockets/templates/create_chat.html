@@ -4,12 +4,14 @@
   <div class="sign-in-header">
     <h2>Sign In Code</h2>
   </div>
-  <form class="input-container">
+  <form class="input-container" method="post" action="">
     <input type="text" class="sign-in-input" placeholder="Enter your sign-in code">
+    <input type="text" class="sign-in-input" placeholder="Name">
     <div class="button-container">
         <button class="enter-button">Enter</button>
         <button class="enter-button">Generate Code</button>
     </div>
+    {% csrf_token %}
   </form>
 </div>
 
