@@ -5,12 +5,17 @@
         <h2>Chat App</h2>
       </div>
     <div class="chat-messages">
-        <div class="message received">Hello!</div>
-        <div class="message sent">Hi there!</div>
+        {% for chat in chat_logs %}
+            {% if chat.user == 'received' %}
+                <div class="message received">{{ chat.text }}</div>
+            {% else %}
+                <div class="message sent">{{ chat.text }}</div>
+            {% endif %}
+        {% endfor %}
     </div>
-    <form class="chat-input-container">
-        <input type="text" class="message-input" placeholder="Type your message...">
-        <button class="send-button">Send</button>
+    <form class="chat-input-container" method="post" action="">
+        <input type="text" class="message-input" placeholder="Type your message..." name="message">
+        <button class="send-button" type="submit">Send</button>
         {% csrf_token %}
     </form>
 </div>

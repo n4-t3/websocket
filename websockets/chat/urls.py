@@ -2,5 +2,5 @@ from django.urls import path
 from .views import ChatView
 
 urlpatterns = [
-    path("<int:id>/", ChatView.as_view())
+    path("<uuid:id>/<slug:user>", ChatView.as_view(),name="ChatView")
 ]
