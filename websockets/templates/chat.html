@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
 <div class="chat-wrapper">
     <div class="chat-header">
         <h2>Chat App</h2>
+        <h4 id="room-id">{{ room_id }}</h4>
       </div>
     <div class="chat-messages">
         {% for chat in chat_logs %}
@@ -13,10 +15,11 @@
             {% endif %}
         {% endfor %}
     </div>
-    <form class="chat-input-container" method="post" action="">
+    <div class="chat-input-container" >
         <input type="text" class="message-input" placeholder="Type your message..." name="message">
         <button class="send-button" type="submit">Send</button>
         {% csrf_token %}
-    </form>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </div>
 {% endblock %}
