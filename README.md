@@ -7,6 +7,10 @@
 
 Real-time chatting application built with Django and WebSocket, featuring 24-hour data retention and the creation of chat rooms using random codes.
 
+## Usage
+
+![preview](./Usage.gif)
+
 ## How to Locally Run the Project
 
 Make sure you have Python 3.8 or higher installed. Install Poetry for managing the project's virtual environment.
